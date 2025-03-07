@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Listing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .concert-card {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .concert-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .concert-image {
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        .concert-details {
+            padding: 15px;
+        }
+        h3 {
+            margin: 0;
+        }
+        .concert-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+        .price-info {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2d89ff;
+        }
+        .tickets-left {
+            font-size: 14px;
+            color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="concert-card" onclick="goToConcertPage()">
+        <div class="concert-image" style="background-image: url('concert-taylor.jpg');"></div>
+        <div class="concert-details">
+            <h3>Taylor Swift</h3>
+            <div class="concert-info">
+                <div class="info-item">
+                    <i class="far fa-calendar"></i>
+                    <span>June 15, 2025 • 19:30</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Madison Square Garden, New York</span>
+                </div>
+            </div>
+            <div class="price-info">
+                <p class="price">$199.99</p>
+                <p class="tickets-left">250 tickets left</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToConcertPage() {
+            window.location.href = "concert-details.html"; // Change to your actual concert details page
+        }
+    </script>
+
+</body>
+</html>
